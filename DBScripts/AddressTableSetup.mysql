@@ -1,0 +1,11 @@
+CREATE TABLE `eastmanf_kleinuser`.`address` (
+     `ID` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT , 
+    `User_ID` INT(11) UNSIGNED NOT NULL ,
+     `Address1` VARCHAR(64) NOT NULL , 
+    `Address2` VARCHAR(64) NULL DEFAULT NULL ,
+     `City` VARCHAR(32) NOT NULL ,
+     `State` VARCHAR(32) NOT NULL , 
+     `Zip` INT(6) UNSIGNED NOT NULL ,
+    PRIMARY KEY (`ID`),
+    CONSTRAINT `FK_Address_User_ID` FOREIGN KEY (`User_ID`) REFERENCES `user` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE = InnoDB;

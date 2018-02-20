@@ -1,0 +1,7 @@
+CREATE TABLE `eastmanf_kleinuser`.`user` (
+    `ID` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT , 
+    `FirstName` VARCHAR(64) NOT NULL , 
+    `LastName` VARCHAR(64) NOT NULL , 
+    `LoginName` VARCHAR(128) NOT NULL , 
+    PRIMARY KEY (`ID`)
+ ) ENGINE = InnoDB COMMENT = 'Main User account';
